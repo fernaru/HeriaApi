@@ -3,12 +3,16 @@ package com.co.kerbero.hestia.entity;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+@Entity
+@Table(name="menu")
 public class MenuOli implements Serializable {
 	
 	@Id
@@ -99,16 +103,6 @@ public class MenuOli implements Serializable {
 	public void setId_padre(Long id_padre) {
 		this.id_padre = id_padre;
 	}
-
-
-
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-
-
 
 	/**
 	 * 
