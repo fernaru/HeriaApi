@@ -3,6 +3,7 @@ package com.co.kerbero.hestia.controller;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -40,7 +41,9 @@ public class MenuOliRestController {
 		Map<String, Object> response = new HashMap<String, Object>();
 		
 		if(result.hasErrors()){
-			
+			List<String> errors = result.getFieldErrors().stream().map(err -> { return "El campo '"+err.getField()+"' el mensaje "+ err.getDefaultMessage(); }).collect(Collectors.toList());
+			response.put("errores", errors);
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
 		}
 		try {
 			menuNew = menuService.save(menu);
