@@ -10,10 +10,10 @@ import com.co.kerbero.hestia.models.dao.IMenuOilDao;
 
 @Service
 public class MenuOilServiceImple implements IMenuOilService {
-	
-	@Autowired
-	private IMenuOilDao menuDao;
 
+	@Autowired
+	IMenuOilDao menuDao; 
+	
 	@Override
 	public List<MenuOli> findAll() {
 		// TODO Auto-generated method stub
@@ -36,6 +36,12 @@ public class MenuOilServiceImple implements IMenuOilService {
 	public void delete(Long id, Long idUsuario) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public List<MenuOli> menuForTypeAdmon(Long idrol) {
+		
+		return null;
 	}
 
 }

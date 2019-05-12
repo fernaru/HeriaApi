@@ -10,9 +10,6 @@ import com.co.kerbero.hestia.models.dao.IUsuarioDao;
 
 @Service
 public class UsuarioServiceImple implements IUsuarioService {
-
-	@Autowired
-	private IUsuarioDao usuarioDao;
 	
 	@Override
 	public List<Usuario> findAll() {

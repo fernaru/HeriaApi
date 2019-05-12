@@ -10,9 +10,6 @@ import com.co.kerbero.hestia.models.dao.IRolDao;
 
 @Service
 public class RolServiceImple implements IRolService {
-
-	@Autowired
-	private IRolDao rolDao;
 	
 	@Override
 	public List<Rol> findAll() {

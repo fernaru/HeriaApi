@@ -14,4 +14,6 @@ public interface IMenuOilService {
 	
 	public void delete(Long id, Long idUsuario);
 	
+	public List<MenuOli> menuForTypeAdmon(Long idRol);
+	
 }
