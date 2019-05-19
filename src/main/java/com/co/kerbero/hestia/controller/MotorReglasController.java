@@ -39,7 +39,7 @@ public class MotorReglasController {
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.BAD_REQUEST);
 		}
 		try {
-			motor.saveRule(reglas.getUsers(), reglas.getRol());
+			motor.saveRule(reglas);
 			response.put("mensaje", "El usuario ha sido creado con éxito");
 			return new ResponseEntity<Map<String, Object>> (response, HttpStatus.CREATED);
 		}catch (DataAccessException e) {

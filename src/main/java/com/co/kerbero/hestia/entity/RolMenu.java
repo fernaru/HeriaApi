@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="rol_menu")
@@ -17,10 +18,10 @@ public class RolMenu implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotEmpty
+	@NotNull
 	private Long idrol;
 	
-	@NotEmpty
+	@NotNull
 	private Long idmenu;
 	
 	@NotEmpty

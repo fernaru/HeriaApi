@@ -1,10 +1,9 @@
 package com.co.kerbero.hestia.services;
 
-import com.co.kerbero.hestia.entity.Rol;
-import com.co.kerbero.hestia.entity.Usuario;
+import com.co.kerbero.hestia.entity.Reglas;
 
 public interface IMotorReglasService {
 	
-	public void saveRule(Usuario users, Rol rol);
+	public void saveRule( Reglas reglas);
 
 }

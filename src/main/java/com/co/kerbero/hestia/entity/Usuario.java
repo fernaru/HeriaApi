@@ -11,7 +11,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -23,36 +22,36 @@ public class Usuario implements Serializable {
 	
 	private String tipoIdenti;
 	
-	@NotEmpty
+	
 	@Size(min=3, max=35)
 	@Column(nullable=false)
 	private String nombre;
 	
 	private String segundoNombre;
 	
-	@NotEmpty
+	
 	@Size(min=3, max=35)
 	@Column(nullable=false)
 	private String apellido;
 	
 	private String segundoApellido;
 	
-	@NotEmpty
+	
 	@Size(min=8, max=18)
 	@Column(nullable=false, unique=true)
 	private String username;
 	
-	@NotEmpty
+	
 	@Size(min=8, max=18)
 	@Column(nullable=false, unique=true)
 	private String password;
 	
-	@NotEmpty
+	
 	@Size(max=1)
 	@Column(nullable=false, unique=true)
 	private String estadoUser;
 	
-	@NotEmpty
+	
 	@Email
 	@Column(nullable=false, unique=true)
 	private String email;
@@ -74,19 +73,19 @@ public class Usuario implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date fechaConforEmpresa;
 	
-	@NotEmpty
-	@Column(nullable=false)
-	private Long telefono;
 	
-	@NotEmpty
-	private Long celular;
+	@Column(nullable=false)
+	private String telefono;
+	
+	
+	private String celular;
 	
 	private String direccion;
 	private String nombreEmpresa;
 	private String direcEmpresa;
 	private String telefEmpresa;
 	
-	@NotEmpty
+	
 	private String nitEmpresa;
 	
 	@PrePersist
@@ -214,22 +213,6 @@ public class Usuario implements Serializable {
 		this.fechaConforEmpresa = fechaConforEmpresa;
 	}
 
-	public Long getTelefono() {
-		return telefono;
-	}
-
-	public void setTelefono(Long telefono) {
-		this.telefono = telefono;
-	}
-
-	public Long getCelular() {
-		return celular;
-	}
-
-	public void setCelular(Long celular) {
-		this.celular = celular;
-	}
-
 	public String getDireccion() {
 		return direccion;
 	}
@@ -270,6 +253,24 @@ public class Usuario implements Serializable {
 		this.nitEmpresa = nitEmpresa;
 	}
 	
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+
+
+
 	/**
 	 * 
 	 */
