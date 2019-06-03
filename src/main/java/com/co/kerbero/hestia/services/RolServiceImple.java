@@ -2,11 +2,9 @@ package com.co.kerbero.hestia.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.co.kerbero.hestia.entity.Rol;
-import com.co.kerbero.hestia.models.dao.IRolDao;
 
 @Service
 public class RolServiceImple implements IRolService {

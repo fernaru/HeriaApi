@@ -43,12 +43,12 @@ public class Usuario implements Serializable {
 	
 	
 	@Size(min=8, max=18)
-	@Column(nullable=false, unique=true)
+	@Column(nullable=false, unique=false)
 	private String password;
 	
 	
 	@Size(max=1)
-	@Column(nullable=false, unique=true)
+	@Column(nullable=false, unique=false)
 	private String estadoUser;
 	
 	
